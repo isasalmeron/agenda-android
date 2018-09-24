@@ -1,0 +1,72 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">   <!--Match parent significa "igual a da classe 'pai', e ScrollView habilidade e opção de rolagem" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Foi utilizado o Relative Layout para conseguir colocar o botão da câmera em cima da foto-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp">
+
+            <!--Imagem-->
+            <ImageView
+                android:id="@+id/formulario_foto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/person"
+                android:background="#00A8EC"
+            />
+
+            <!--Botão de tirar foto-->
+            <Button
+                android:id="@+id/formulario_botao_foto"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/fundo_camera"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+            />
+        </RelativeLayout>
+
+        <!--Caixa de texto-->
+        <EditText android:hint="Nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/formulario_nome"
+        />  <!--Wrap content significa "o suficiente para caber o 'texto'"-->
+
+        <EditText android:hint="Endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/formulario_endereco"
+        />
+
+        <EditText android:hint="Telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/formulario_telefone"
+        />
+
+        <EditText android:hint="Site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/formulario_site"
+        />
+
+        <!--Estrelinhas-->
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:max="10"
+            android:layout_gravity="center"
+            android:id="@+id/formulario_nota"
+        />
+    </LinearLayout>
+</ScrollView>
